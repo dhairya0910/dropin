@@ -6,7 +6,17 @@
     <title>dropIn</title>
 </head>
 <body>
-
+   <!-- Including Flash mesages temporarily  -->
+       <% if (success && success.length>0) { %>
+        <div>
+    <p><%= success %></p>
+  </div>
+<% } %>
+<% if (error && error.length>0) { %>
+        <div>
+    <p><%= error %></p>
+  </div>
+<% } %>
             <p> Task  </p>
             <p><%= task.title %></p>
             <p><%= task.description %></p>

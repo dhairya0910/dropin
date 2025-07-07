@@ -4,6 +4,17 @@
   <title>Edit Task</title>
 </head>
 <body>
+    <!-- Including Flash mesages temporarily  -->
+       <% if (success && success.length>0) { %>
+        <div>
+    <p><%= success %></p>
+  </div>
+<% } %>
+<% if (error && error.length>0) { %>
+        <div>
+    <p><%= error %></p>
+  </div>
+<% } %>
   <h1>Edit Task</h1>
   <form action="/task/<%= task._id %>?_method=PUT" method="POST">
     <label>Title:</label><br />

@@ -14,7 +14,6 @@ const userSchema= new Schema({
         required:true
        
     },
-    phone :Number,
     tasks:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Task"

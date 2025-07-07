@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add New Task</title>
+</head>
+<body>
+      <!-- Including Flash mesages temporarily  -->
+       <% if (success && success.length>0) { %>
+        <div>
+    <p><%= success %></p>
+  </div>
+<% } %>
+<% if (error && error.length>0) { %>
+        <div>
+    <p><%= error %></p>
+  </div>
+<% } %>
+  <h1>Add New Task</h1>
+  <form action="/task/addnew" method="POST">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="task[title]" placeholder="New Task"><br><br>
+
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="task[description]" placeholder="New task kaa kaam"></textarea><br><br>
+
+    <label for="priority">Priority:</label><br>
+    <select id="priority" name="task[priority]" required>
+      <option value="">Select priority</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="Urgent">Urgent</option>
+    </select><br><br>
+
+    <button type="submit">Add Task</button>
+  </form>
+</body>
+</html>

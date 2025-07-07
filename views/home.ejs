@@ -6,7 +6,21 @@
     <title>dropIn</title>
 </head>
 <body>
-    
+       <!-- Including Flash mesages temporarily  -->
+       <% if (success && success.length>0) { %>
+        <div>
+    <p><%= success %></p>
+  </div>
+<% } %>
+<% if (error && error.length>0) { %>
+        <div>
+    <p><%= error %></p>
+  </div>
+<% } %>
+    <a href="/user/login"><button>Login Here    </button></a>
+     <a href="/user/signup"><button>Signup here!</button></a>
+    <a href="/task/addnew"><button>Add new Task</button></a>
+    <a href="/user/logout"><button>Logout Here    </button></a>
     <ul>
         <% let cout=0 %>
        <% tasks.forEach(task => { %>
